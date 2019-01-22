@@ -86,8 +86,14 @@ button:disabled {
   background-color: #D0D2D3;
 }
 
+button:disabled:hover {
+  background-color: #D0D2D3;
+  cursor: unset
+}
+
 button:hover {
   background-color: #eb008b;
+  cursor: pointer;
 }
 
 button:active,
