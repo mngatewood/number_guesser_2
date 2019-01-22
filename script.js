@@ -34,6 +34,10 @@ function submitGuessInput() {
 }
 
 function isValidGuess() {
+  console.log(`rangemax: ${gameData.rangeMaximum}`)
+  console.log(`rangemin: ${gameData.rangeMinimum}`)
+  console.log(`random number: ${gameData.randomNumber}`)
+  console.log(`guess: ${guessInput.value}`)
   if (guessInput.value <= gameData.rangeMaximum && guessInput.value >= gameData.rangeMinimum) {
     return 'valid'
   } else if (isNaN(guessInput.value)){
@@ -88,6 +92,7 @@ function resetGame() {
   document.querySelector('.last-guess').innerHTML = "";
   document.querySelector('.feedback-result').innerHTML = "";
   gameData = { rangeMinimum: 0, rangeMaximum: 100 }
+  generateRandomNumber()
 }
 
 function levelUp() {
