@@ -9,7 +9,6 @@ generateRandomNumber()
 
 function generateRandomNumber() {
   gameData.randomNumber = Math.floor(Math.random() * (gameData.rangeMaximum - gameData.rangeMinimum) + gameData.rangeMinimum)
-  console.log(gameData.randomNumber)
 }
 
 function enableSubmitAndClearButtons() {
@@ -34,10 +33,6 @@ function submitGuessInput() {
 }
 
 function isValidGuess() {
-  console.log(`rangemax: ${gameData.rangeMaximum}`)
-  console.log(`rangemin: ${gameData.rangeMinimum}`)
-  console.log(`random number: ${gameData.randomNumber}`)
-  console.log(`guess: ${guessInput.value}`)
   if (guessInput.value <= gameData.rangeMaximum && guessInput.value >= gameData.rangeMinimum) {
     return 'valid'
   } else if (isNaN(guessInput.value)){
