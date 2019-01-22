@@ -88,7 +88,7 @@ button:disabled {
 
 button:disabled:hover {
   background-color: #D0D2D3;
-  cursor: unset
+  cursor: auto;
 }
 
 button:hover {
